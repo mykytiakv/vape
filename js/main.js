@@ -6,13 +6,13 @@ $('.mr-btn').click(function(e) {
         // $('.how-info').css({'height': '200px'});
         $('.how-info').removeClass('big');
         $('.how-gradient').css({'display': 'block'});
-        $(parent).append('<span class="circle-plus"><i class="fa fa-plus" aria-hidden="true"></i></span><br>Читать больше');
+        $(parent).append('<span class="circle-plus"><i class="material-icons">add</i></span><br>Читать больше');
     } else {
         $(parent).addClass('o');        
         // $('.how-info').css({'height': '100%'});
         $('.how-info').addClass('big');
         $('.how-gradient').css({'display': 'none'});
-        $(parent).append('<span class="circle-plus"><i class="fa fa-minus" aria-hidden="true"></i></span><br>Читать меньше');
+        $(parent).append('<span class="circle-plus"><i class="material-icons">remove</i></span><br>Читать меньше');
     }	
 })
 $('#filter-button').click(function() {

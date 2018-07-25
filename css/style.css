@@ -18,7 +18,7 @@
 }
 @font-face {
     font-family: 'DIN Pro Black';
-    src: url('../Fonts/DINPro-black.otf')  format('opentype'),
+    src: url('../Fonts/DINPro-Black.otf')  format('opentype'),
         url('../Fonts/DINPro-Black.eot?') format('eot'), 
          url('../Fonts/DINPro-Black.woff') format('woff'), 
          url('../Fonts/DINPro-Black.woff2') format('woff'), 
@@ -44,6 +44,7 @@
 .p-main,
 .mr-btn i,
 .reset-btn,
+.reset-btn i,
 .reset-btn span {
     -webkit-transition: all 0.2s ease;
     -moz-transition: all 0.2s ease;
@@ -483,9 +484,6 @@ nav li a {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
     position: absolute;
     bottom: 0;
-}
-.read-more i {
-    font-size: 1em;
 }
 .read-more button {
     font-family: "DIN Pro";
@@ -1168,7 +1166,7 @@ sup {
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 1;
+    z-index: 99999;
     top: 0;
     left: 0;
     background-color: #111;
@@ -1289,9 +1287,15 @@ sup {
     color: white;
     background-color: #ff0000;
 }
-.mr-btn.reset-btn:hover i,
-.mr-btn.reset-btn:hover span {
+.reset-btn .circle-plus i {
+    color: #000;
+}
+.reset-btn:hover i,
+.reset-btn:hover span {
     border-color: #ff0000;
+}
+.reset-btn:hover i {
+    color: #fff;
 }
 .open .circle-plus,
 .reset .circle-plus {
@@ -1407,8 +1411,9 @@ ol.breadcrumb a {
     margin: auto;
     font-weight: 100;
     border-radius: 100%;
-    width: 100%;
-    height: 100%;
+    width: 101%;
+    height: 101%;
+    color: #ff0000;
 }
 .menu {
     padding: 43px;
