@@ -1,14 +1,14 @@
 $('.mr-btn').click(function(e) {
     var parent = ($(e.target).hasClass('mr-btn')) ? e.target : $(e.target).closest('.mr-btn');
     $('.mr-btn').empty();
-    if ($(parent).hasClass('open')) {
-        $(parent).removeClass('open');
+    if ($(parent).hasClass('o')) {
+        $(parent).removeClass('o');
         // $('.how-info').css({'height': '200px'});
         $('.how-info').removeClass('big');
         $('.how-gradient').css({'display': 'block'});
         $(parent).append('<span class="circle-plus"><i class="fa fa-plus" aria-hidden="true"></i></span><br>Читать больше');
     } else {
-        $(parent).addClass('open');        
+        $(parent).addClass('o');        
         // $('.how-info').css({'height': '100%'});
         $('.how-info').addClass('big');
         $('.how-gradient').css({'display': 'none'});
@@ -36,8 +36,3 @@ $(document).ready(function(){
         $('body,html').animate({scrollTop: top}, 2000);
     });
 });
-
-$('#sort-btn').click(function() {
-    var filter = $('#lg-filter');
-    ($(filter).hasClass('hide')) ? $(filter).removeClass('hide') : $(filter).addClass('hide');
-})

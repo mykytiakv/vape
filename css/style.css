@@ -42,7 +42,9 @@
 .ph-number,
 .preview-info ul li,
 .p-main,
-.mr-btn i {
+.mr-btn i,
+.reset-btn,
+.reset-btn span {
     -webkit-transition: all 0.2s ease;
     -moz-transition: all 0.2s ease;
     -o-transition: all 0.2s ease;
@@ -541,10 +543,17 @@ nav li a {
 .article:hover .article-img-layer {
     background-color: transparent;
 }
-.open a {
+.open a,
+.reset a {
     font-size: 1em;
     font-family: "DIN Pro";
     margin-top: 20px;
+    color: #ff0000;
+}
+.for-filter.reset a {
+    color: black;
+}
+.for-filter.reset button:hover {
     color: #ff0000;
 }
 h3 a {
@@ -645,7 +654,7 @@ sup {
     color: #ff0000;
 }
 .pagination li {
-    font-weight: bold;
+    font-family: "DIN Pro";
     padding-top: 1px;
     color: #000;
     border-color: #000;
@@ -659,7 +668,7 @@ sup {
     border-color: #ff0000;
 }
 .pagination li.active a {
-    color: #000;
+    color: #fff;
 }
 .pagination li:hover a {
     color: #fff;
@@ -862,6 +871,10 @@ sup {
     padding: 20px !important;
     background-color: #e2e2e2;
     width: 100%;
+}
+.filter > div.reset {
+    background-color: transparent;
+    padding-top: 0 !important;
 }
 .filter ul {
     list-style-type: none;
@@ -1164,7 +1177,7 @@ sup {
     padding-top: 60px;
 }
 
-.sidenav a {
+.sidenav a:not(.mr-btn) {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
@@ -1276,7 +1289,12 @@ sup {
     color: white;
     background-color: #ff0000;
 }
-.open .circle-plus {
+.mr-btn.reset-btn:hover i,
+.mr-btn.reset-btn:hover span {
+    border-color: #ff0000;
+}
+.open .circle-plus,
+.reset .circle-plus {
     margin-right: 15px;
 }
 #lg-filter.hide {
@@ -1321,20 +1339,36 @@ ol.breadcrumb a {
     height: 145px;
 }
 .main-18 p {
-    font-family: "DIN Pro";
+    font-family: "DIN Pro Bold";
     font-size: 0.9em;
     color: #000;
     max-width: 55%;
     text-align: center;
     margin: auto;
     margin-bottom: 20px;
-    max-width: 300px;
+    max-width: 385px;
 }
 .main-18 .main-red {
     border-bottom: none;
+    margin: 10px 0 5px 0;
+    font-family: "Pobeda Bold";
 }
 .sub-main-btn.red {
     border-color: #ff0000;
+}
+.main-18-btns {
+    margin-top: 20px;
+}
+.main-18-btns > div {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+.main-18-btns > div:first-child {
+    padding-right: 15px;
+}
+.main-18-btns > div:last-child {
+    padding-left: 15px;
 }
 /* end 18+ */
 
@@ -1346,6 +1380,22 @@ ol.breadcrumb a {
     display: inline-block;
     border-radius: 100%;
     text-align: center;
+}
+.for-filter button {
+    border: none;
+    background-color: transparent;
+}
+.for-filter button:hover {
+    cursor: pointer;
+}
+.for-filter button:hover span {
+    border-color: #ff0000;
+    background-color: #ff0000;
+    color: white;
+}
+.for-filter .circle-plus {
+    border-color: black;
+    color: black;
 }
 .circle-plus i {
     position: absolute;
@@ -1384,19 +1434,10 @@ ol.breadcrumb a {
 }
 /* end sidenav */
 @media only screen and (max-width: 1400px) {
-/*    .navbar-nav .nav-link {
-        font-size: 1em !important;
-    }*/
-/*    .md-navbar .main-logo img {
-        height: 155px;
-    }*/
-/*    .main-logo { 
-        width: 155px
-    }*/
     .slider-container {
         margin-top: 0;
     }
-    .top li {
+    .top nav li {
         font-size: .8em;
         padding-top: 2px;
         padding-bottom: 2px;
@@ -1412,11 +1453,15 @@ ol.breadcrumb a {
     .big-footer .main-btn {
         font-size: 1.7em;
     }
+    .main-btn {
+        font-size: 1.7em;
+        padding: 0 35px;
+    }
     .map-phone {
         font-size: 1.3em;
     }
-    .big-footer .logo {
-        height: 145px;
+    .big-footer .logo-link img.logo {
+        height: 138px;
     }
     .big-footer .main-btn {
         font-size: 1.6em;
@@ -1485,7 +1530,7 @@ ol.breadcrumb a {
         margin-right: 50px;
     }
     .bottom-navbar li a {
-        font-size: 1em;
+        font-size: 0.85em;
     }
     .article p {
         font-size: 1em;
@@ -1579,8 +1624,6 @@ ol.breadcrumb a {
     .navbar {
         display: flex !important;
         display: -ms-flexbox !important;
-/*        flex-direction: row-reverse;
-        -ms-flex-direction: row-reverse;*/
     }
     .bottom-navbar.lg {
         display: none;
@@ -1637,8 +1680,56 @@ ol.breadcrumb a {
         max-height: 350px;
     }
 }
-
+@media only screen and (max-width: 925px) { 
+    .banner-main-t {
+        font-size: 4em;
+        margin-bottom: 5px;
+        line-height: 1.3em;
+    }
+    .banner-sub-main-t {
+        margin-bottom: 20px;
+    }
+    .menu {
+        padding: 43px 15px;
+    }
+    .img-logo, .logo {
+        height: 140px;
+    }
+    .main-logo, .main-logo-imitate {
+        width: 140px;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .big-footer .logo {
+        height: 100px !important;
+    }
+}
 @media only screen and (max-width: 768px) {
+    .md-navbar.lg {
+        display: none;
+    }
+    .md-navbar .main-logo img {
+        height: 150px;
+    }
+    .md-navbar.sm {
+        display: block;
+    }
+    .main-logo {
+        position: relative;
+        top: 0;
+        margin-bottom: 20px;
+        width: 150px;
+        margin: 0;
+    }
+    .md-navbar.sm .container {
+        padding: 2% 4%;
+    }
+    .md-navbar .main-logo img {
+        height: 150px;
+    }
+    .user-btns {
+        margin-left: auto;
+    }
     .slider-container {
         padding: 20px;
     }
@@ -1649,16 +1740,7 @@ ol.breadcrumb a {
     .banner-sub-main-t {
         font-size: 1em;
         margin-bottom: 20px;
-    }
-    .md-navbar.lg {
-        display: none;
-    }
-    .md-navbar .main-logo img {
-        height: 165px;
-    }
-    .md-navbar.sm {
-        display: block;
-    }
+    }    
     .main-red {
         font-size: 2em;
         padding-bottom: 0;
@@ -1749,6 +1831,8 @@ ol.breadcrumb a {
         position: relative;
         top: 0;
         margin-bottom: 20px;
+        width: 120px;
+        margin: 0;
     }
     .md-navbar.sm .container {
         padding: 2% 4%;
@@ -1756,19 +1840,12 @@ ol.breadcrumb a {
     .md-navbar .main-logo img {
         height: 120px;
     }
-    .main-logo {
-        width: 120px;
-        margin: 0
-    }
-    .user-btns {
-        margin-left: auto;
-    }
     .ship-categories {
         padding: 0;
     }
     .characteristics ul {
         margin-top: 30px;
-    }
+    }    
 }
 @media only screen and (width: 768px) { 
     .how-container {
@@ -1777,6 +1854,15 @@ ol.breadcrumb a {
         flex: 0 0 100%;
     }
 }
+@media only screen and (max-width: 767px) {
+    .big-footer .logo {
+        height: 120px !important;
+    }
+    .big-footer .main-btn {
+        padding: 0 35px;
+        font-size: 1.5em;
+    }
+} 
 @media only screen and (max-width: 720px) {  
     .map.sm {
         display: block;
@@ -1802,11 +1888,7 @@ ol.breadcrumb a {
     }
     .red-line {
         width: 120px;
-    }
-    .big-footer .main-btn {
-        padding: 0 35px;
-        font-size: 1.5em;
-    }
+    }    
     .big-footer .logo {
         height: 130px;
     }
@@ -1854,6 +1936,7 @@ ol.breadcrumb a {
     .interesting .main-red {
         font-size: 1.7em;
     }
+
 }
 @media only screen and (max-width: 599px) { 
     .map.sm {
@@ -1869,12 +1952,15 @@ ol.breadcrumb a {
     .map-info-content ul li a {
         font-size: 0.9em;
     }
-    
+    .main-18 .content {
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 @media only screen and (max-width: 570px) { 
     .main-18 .content {
         max-height: 100vh;
-        max-width: 100vw;
+        max-width: 100vw;        
     }
     .main-18 button {
         margin-bottom: 20px;
@@ -1968,6 +2054,10 @@ ol.breadcrumb a {
     .map.sm {
         min-height: 670px;
     }
+    .main-18 .content {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }
 @media only screen and (max-width: 490px) {
     /*.user-btns span {
@@ -1988,13 +2078,30 @@ ol.breadcrumb a {
     .main-18 .content { 
         background-size: cover;
     }    
-}
-@media only screen and (max-width: 490px) {
     .ship-categories .nav-item {
         padding: 0 3px;
     }
     .ship-categories .nav-link {
         font-size: 1.45em;
+    }
+}
+@media only screen and (max-width: 470px) {
+    .main-18 .main-18-btns {
+        flex-direction: column !important;
+        -ms-flex-direction: column !important;
+    }
+    .main-18 .main-18-btns > div {
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+        -ms-flex-pack: center!important;
+        justify-content: center!important;
+    }
+    .main-18-btns > div:first-child {
+        padding-right: 0;
+    }
+    .main-18-btns > div:last-child {
+        padding-left: 0;
     }
 }
 @media only screen and (max-width: 425px) {
