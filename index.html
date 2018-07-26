@@ -33,7 +33,7 @@
                             </button>
                             <div class="collapse navbar-collapse">
                                 <ul class="navbar-nav">
-                                    <li class="nav-item">ПН-ПТ / 9:00 - 18:00</li>
+                                    <li class="nav-item">ПН-НД / 11:00 - 21:00</li>
                                     <li class="nav-item">пл. Данила Галицького, 16 / вул. Кубійовича, 17</li>
                                 </ul>
                                 <ul class="navbar-nav navbar-right ml-auto">
@@ -937,14 +937,14 @@
                 lng: 24.0362504,
                 name: "VAPE BROTHERS",
                 address: "пл. Данила Галицького, 16",
-                time: "ПН - ПТ / 9:00 - 18:00"
+                time: "ПН - НД / 11:00 - 21:00"
             },
             {
                 lat: 49.844081,
                 lng: 24.0289631,
                 name: "VAPE BROTHERS",
                 address: "вул. Кубійовича, 17",
-                time: "ПН - ПТ / 9:00 - 18:00"
+                time: "ПН - НД / 11:00 - 21:00"
             }
         ]
         var uluru = {lat: 49.844081, lng: 24.0899931}; 
@@ -992,6 +992,13 @@
                     right: '0px', top: '25px',
 
                 });
+
+                setTimeout(function() {
+                    var arrow_div = $(".gm-style-iw").prev();
+
+                    $("div:eq(0)", arrow_div).hide();
+                    $("div:eq(2)", arrow_div).hide();
+                }, 2000);
 
             }); 
 
