@@ -257,7 +257,7 @@ nav li a {
 }
 .slider {
     position: relative;
-    border: 7px solid #000;
+    border: 7px solid #fff;
     padding: 10px;
     padding-bottom: 0;
     width: 100%;
@@ -275,7 +275,7 @@ nav li a {
     font-family: "Pobeda Bold";
     font-size: 6em;
     color: #fff;
-    margin-bottom: 20px;
+    /*margin-bottom: 20px;*/
 }
 .banner-sub-main-t {
     font-family: "DIN Pro";
@@ -1448,6 +1448,9 @@ ol.breadcrumb a {
 }
 .modal-body input {
     border-radius: 0;
+}
+.gm-style-iw:first-child {
+    width: 185px !important;
 }
 /* end sidenav */
 @media only screen and (max-width: 1400px) {
