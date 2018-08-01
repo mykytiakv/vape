@@ -1,6 +1,6 @@
 idleTimer = null;
 idleState = false; // состояние отсутствия
-idleWait = 60000; // 1 минута
+idleWait = 10000; // 1 минута - 60000 указать нужное время
  
 $(document).ready( function(){
   $(document).bind('mousemove keydown scroll', function(){
