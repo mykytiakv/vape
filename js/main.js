@@ -24,6 +24,11 @@ $('.filter-type li').click(function(e) {
     $(checkbox).prop('checked', !$(checkbox).is(':checked'));
 })
 
+$('#unload-form').submit(function(e) {
+    e.preventDefault();
+    console.log('send form');
+})
+
 function closeNav() {
     document.getElementById("mobile-filter").style.width = "0";
 }

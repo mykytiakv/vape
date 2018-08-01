@@ -575,6 +575,12 @@ h3 a {
     border-bottom: 3px solid #ff0000;
     text-align: center;
 }
+.hidden {
+    display: none;
+}
+.unload .main-red {
+    font-size: 1.5em;
+}
 .main-red.char-item {
     border-color: transparent;
     color: #777;
@@ -1331,6 +1337,14 @@ ol.breadcrumb a {
     height: 100vh;
     background-color: #000;
 }
+.main-18.unload {
+    background-color: rgba(0, 0, 0, 0.65);
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    position: fixed;
+    top: 0;
+}
 .main-18 .content {
     background: url(../images/war.png) center;
     background-repeat: no-repeat;
@@ -1347,6 +1361,9 @@ ol.breadcrumb a {
 }
 .main-18 img {
     height: 145px;
+}
+.main-18.unload img {
+    height: 180px;
 }
 .main-18 p {
     font-family: "DIN Pro Bold";
@@ -1379,6 +1396,30 @@ ol.breadcrumb a {
 }
 .main-18-btns > div:last-child {
     padding-left: 15px;
+}
+.main-18-btns form input {
+    margin-top: 10px;
+}
+.main-18-btns form button {
+    margin-top: 25px;
+}
+.main-18-btns form input,
+.main-18-btns form button {
+    width: 220px;
+}
+.main-18-btns form input:hover {
+    cursor: text;
+    background-color: #e2e2e2;
+    border-color: #777;
+}
+.main-18-btns form input:focus {
+    background-color: #e2e2e2;
+    border-color: #777;
+}
+input.sub-main-btn {
+    border-radius: 0;
+    margin-left: auto;
+    margin-right: auto;
 }
 /* end 18+ */
 
@@ -1713,6 +1754,9 @@ ol.breadcrumb a {
     .item-review img {
         max-height: 350px;
     }
+    .main-18.unload img {
+        height: 170px;
+    }
 }
 @media only screen and (max-width: 925px) { 
     .banner-main-t {
@@ -1731,6 +1775,9 @@ ol.breadcrumb a {
     }
     .main-logo, .main-logo-imitate {
         width: 140px;
+    }
+    .main-18.unload img {
+        height: 135px;
     }
 }
 @media only screen and (max-width: 800px) {
